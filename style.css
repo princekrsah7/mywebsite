@@ -6,9 +6,16 @@
     box-sizing: border-box;
 
 }
-
-:root{
-    ==primary=text=color: #183b56:
-    
-    
+div{
+    color: rgb(15, 46, 2);
+    background: #5c5564;
+}
+head{
+    color: black;
+    background: white;
+    font-style: italic;
+}
+section{
+    background-color: gray;
+    background-size: contain;
 }
