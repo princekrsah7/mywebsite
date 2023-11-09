@@ -3,43 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>loader</title>
     <style>
         *{
-            margin: 0;
-            padding: 0;
-        }
-         .paragraph1 {
-            color: blue;
+            margin: 0px;
+            padding: 0px;
             box-sizing: border-box;
-           
-         }
-        h2{
-            color: aquamarine;
-           
-          text-align: center;
         }
-        nav{
-             text-align: right;
-             color: blueviolet;
-             
+        html {
+            font-size: 62.5%;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: #191825;
+        }
+        .loader{
+            width: 20rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: #865dff;
+            position: relative;
+            animation: circleloader 2s linear  infinite reverse;
         }
 
+        @keyframes circleloader{
+            100%{
+                rotate: 360deg;
+            }
+        }
+        .loader::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 17rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: #191825;
+        }
+
+        .loader::after{
+            content: "";
+            position: absolute;
+            top: -2.5rem;
+            left: 8.5rem;
+            width: 5rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: #865dff;
+            box-shadow: 0 0 1.5rem #865dff, 0 0 1.5rem #865dff, 0 0 2rem #865dff, 0 0 2.5rem #865dff, 0 0 3rem #865dff;
+        }
     </style>
 </head>
 <body>
-
-    <nav>Home   </nav>
-    <nav>About Us</nav>
-    <nav>Contact Us</nav>
-
-    <h3>
-        <p class="paragraph1" centre >Hey this is prince i am in paragraph 1</p>
-        <p class="paragraph2"> hey prince i am in paragraph 2</p> 
-
-    <h3>
-
-    <h2> hello prince kaise ho aap </h2>
-
+    <div class="loader"></div>
 </body>
 </html>
